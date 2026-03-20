@@ -2283,7 +2283,8 @@
                         el.style.pointerEvents = 'auto';
                         el.style.zIndex = z;
                         el.style.transform = `translateX(${x}px) translateY(${arcY}px) rotate(${arcRot}deg) scale(${sc})`;
-                        el.style.filter = `brightness(${brightness})${blur ? ` blur(${blur}px)` : ''}`;
+                        const sat = isCenter ? 1 : abs === 1 ? 0.4 : 0.2;
+                        el.style.filter = `brightness(${brightness}) saturate(${sat})${blur ? ` blur(${blur}px)` : ''}`;
                         el.style.boxShadow = shadow;
                         el.style.cursor = isCenter ? 'grab' : 'pointer';
                         el.style.borderRadius = '16px';
