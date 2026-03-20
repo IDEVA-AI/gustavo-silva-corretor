@@ -280,6 +280,9 @@
             .card-stack .stack-card:nth-child(3) { top: calc(25vh + 32px); z-index: 3; }
             .card-stack .stack-card:nth-child(4) { top: calc(25vh + 48px); z-index: 4; }
             .card-stack .stack-card:nth-child(5) { top: calc(25vh + 64px); z-index: 5; }
+            .card-stack .stack-card.testimonial-card.stack-active {
+                box-shadow: 0 0 0 2px #016EFF, 0 8px 32px -4px rgba(1,110,255,0.15);
+            }
         }
 
         /* ---- prefers-reduced-motion ---- */
@@ -476,7 +479,7 @@
                             </div>
                         </div>
                         <!-- Partner badges -->
-                        <div class="flex flex-wrap gap-2 md:gap-3 mt-8 reveal delay-700 hero-badge">
+                        <div class="hidden md:flex flex-wrap gap-2 md:gap-3 mt-8 reveal delay-700 hero-badge">
                             <span class="px-2 md:px-4 py-0.5 md:py-2 border border-white/20 rounded-full text-[9px] md:text-xs font-mono uppercase backdrop-blur-md bg-white/5 text-white/80">RIVA</span>
                             <span class="px-2 md:px-4 py-0.5 md:py-2 border border-white/20 rounded-full text-[9px] md:text-xs font-mono uppercase backdrop-blur-md bg-white/5 text-white/80">Direcional</span>
                         </div>
@@ -525,9 +528,9 @@
                 </div>
 
                 <!-- Cards: 2-column asymmetric on desktop -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                <div class="card-stack md:grid md:grid-cols-2 md:gap-6">
                     <!-- Card 1 — tall left -->
-                    <div class="group relative rounded-[20px] bg-white p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-stone-900/[0.06] reveal delay-100">
+                    <div class="stack-card md:!static mb-4 md:mb-0 group relative rounded-[20px] bg-white p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-stone-900/[0.06] reveal delay-100">
                         <!-- Accent corner -->
                         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/[0.05] to-transparent rounded-bl-[80px] transition-all duration-700 group-hover:w-40 group-hover:h-40"></div>
                         <!-- Number -->
@@ -549,7 +552,7 @@
                     </div>
 
                     <!-- Card 2 — tall right -->
-                    <div class="group relative rounded-[20px] bg-stone-900 p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-stone-900/20 reveal delay-200">
+                    <div class="stack-card md:!static mb-4 md:mb-0 group relative rounded-[20px] bg-stone-900 p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-stone-900/20 reveal delay-200">
                         <!-- Accent corner -->
                         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-[80px] transition-all duration-700 group-hover:w-40 group-hover:h-40"></div>
                         <!-- Number -->
@@ -570,7 +573,7 @@
                     </div>
 
                     <!-- Card 3 — wide bottom-left -->
-                    <div class="group relative rounded-[20px] bg-white p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-stone-900/[0.06] reveal delay-300">
+                    <div class="stack-card md:!static mb-4 md:mb-0 group relative rounded-[20px] bg-white p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:shadow-2xl hover:shadow-stone-900/[0.06] reveal delay-300">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/[0.05] to-transparent rounded-bl-[80px] transition-all duration-700 group-hover:w-40 group-hover:h-40"></div>
                         <span class="text-[5.5rem] md:text-[7rem] font-semibold leading-none tracking-[-0.06em] text-stone-900/[0.04] absolute top-4 right-8 select-none transition-all duration-700 group-hover:text-primary/[0.07]">03</span>
                         <div class="w-12 h-12 rounded-2xl bg-stone-900 flex items-center justify-center mb-8 transition-all duration-500 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20">
@@ -590,7 +593,7 @@
                     </div>
 
                     <!-- Card 4 — wide bottom-right -->
-                    <div class="group relative rounded-[20px] border-2 border-dashed border-stone-300 bg-transparent p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-primary/30 hover:bg-white/60 reveal delay-400">
+                    <div class="stack-card md:!static mb-4 md:mb-0 group relative rounded-[20px] border-2 border-dashed border-stone-300 bg-transparent p-8 md:p-10 overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] hover:border-primary/30 hover:bg-white/60 reveal delay-400">
                         <span class="text-[5.5rem] md:text-[7rem] font-semibold leading-none tracking-[-0.06em] text-stone-900/[0.04] absolute top-4 right-8 select-none transition-all duration-700 group-hover:text-primary/[0.07]">04</span>
                         <div class="w-12 h-12 rounded-2xl bg-stone-200 flex items-center justify-center mb-8 transition-all duration-500 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20">
                             <svg class="w-5 h-5 text-stone-600 group-hover:text-white transition-colors duration-500" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -719,7 +722,7 @@
                                 <p class="text-neutral leading-relaxed">Me conta o que voce procura — regiao, tamanho, orcamento. Escuto primeiro, sem compromisso nenhum. A ideia e entender o que faz sentido pra voce.</p>
                             </div>
                             <!-- Mobile mini card: Step 1 -->
-                            <div class="step-card pl-16 md:hidden">
+                            <div class="step-card pl-16 hidden">
                                 <div class="wire-box bg-primary/[0.04] border border-primary/10 rounded-2xl p-5">
                                     <div class="flex items-center gap-3 mb-4">
                                         <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -734,7 +737,7 @@
                                 </div>
                             </div>
                             <!-- Wireframe 1: Phone + Chat conversation -->
-                            <div class="step-card pl-16 md:pl-16 hidden md:block">
+                            <div class="step-card pl-16 md:pl-16">
                                 <div class="wire-box max-w-[340px]">
                                     <svg viewBox="0 0 300 420" fill="none" class="w-full drop-shadow-xl">
                                         <defs>
@@ -840,7 +843,7 @@
                                 <div class="step-num w-10 h-10 rounded-full bg-white border-2 border-stone-300 flex items-center justify-center text-stone-400 font-bold text-sm relative z-10">2</div>
                             </div>
                             <!-- Mobile mini card: Step 2 -->
-                            <div class="step-card pl-16 md:hidden">
+                            <div class="step-card pl-16 hidden">
                                 <div class="wire-box bg-secondary/[0.04] border border-secondary/10 rounded-2xl p-5">
                                     <div class="flex items-center gap-3 mb-4">
                                         <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
@@ -864,7 +867,7 @@
                                 </div>
                             </div>
                             <!-- Wireframe 2: Finance dashboard -->
-                            <div class="step-card pl-16 md:pl-0 md:pr-16 hidden md:flex md:justify-end">
+                            <div class="step-card pl-16 md:pl-0 md:pr-16 md:flex md:justify-end">
                                 <div class="wire-box max-w-[340px] w-full">
                                     <svg viewBox="0 0 300 440" fill="none" class="w-full drop-shadow-xl">
                                         <defs>
@@ -978,7 +981,7 @@
                                 <p class="text-neutral leading-relaxed">Agendamos visita ao apartamento decorado. Monto um comparativo lado a lado entre opcoes pra voce visualizar as diferencas e decidir com seguranca total.</p>
                             </div>
                             <!-- Mobile mini card: Step 3 -->
-                            <div class="step-card pl-16 md:hidden">
+                            <div class="step-card pl-16 hidden">
                                 <div class="wire-box bg-tertiary/[0.04] border border-tertiary/10 rounded-2xl p-5">
                                     <div class="flex items-center gap-3 mb-4">
                                         <div class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center flex-shrink-0">
@@ -1007,7 +1010,7 @@
                                 </div>
                             </div>
                             <!-- Wireframe 3: Floor plan -->
-                            <div class="step-card pl-16 md:pl-16 hidden md:block">
+                            <div class="step-card pl-16 md:pl-16">
                                 <div class="wire-box max-w-[340px]">
                                     <svg viewBox="0 0 300 480" fill="none" class="w-full drop-shadow-xl">
                                         <defs>
@@ -1157,7 +1160,7 @@
                                 </div>
                             </div>
                             <!-- Mobile mini card: Step 4 -->
-                            <div class="step-card pl-16 md:hidden">
+                            <div class="step-card pl-16 hidden">
                                 <div class="wire-box bg-whatsapp/[0.04] border border-whatsapp/10 rounded-2xl p-5">
                                     <div class="flex items-center gap-3 mb-4">
                                         <div class="w-10 h-10 rounded-xl bg-whatsapp/10 flex items-center justify-center flex-shrink-0">
@@ -1186,7 +1189,7 @@
                                 </div>
                             </div>
                             <!-- Wireframe 4: Delivery tracker + keys -->
-                            <div class="step-card pl-16 md:pl-0 md:pr-16 hidden md:flex md:justify-end">
+                            <div class="step-card pl-16 md:pl-0 md:pr-16 md:flex md:justify-end">
                                 <div class="wire-box max-w-[340px] w-full">
                                     <svg viewBox="0 0 300 460" fill="none" class="w-full drop-shadow-xl">
                                         <defs>
@@ -1486,12 +1489,12 @@
                     </div>
                 </div>
 
+                <!-- Mobile card counter -->
+                <div class="lg:hidden sticky top-[calc(25vh-32px)] z-10 flex justify-center mb-2" id="emp-counter">
+                    <span class="bg-stone-900/80 text-white text-xs font-mono px-3 py-1 rounded-full backdrop-blur-sm">1 / 5</span>
+                </div>
                 <!-- Mobile: sticky card stack (lg:hidden) -->
                 <div class="lg:hidden card-stack pb-4">
-                    <!-- Mobile card counter -->
-                    <div class="lg:hidden sticky top-[calc(25vh-32px)] z-10 flex justify-center mb-2" id="emp-counter">
-                        <span class="bg-stone-900/80 text-white text-xs font-mono px-3 py-1 rounded-full backdrop-blur-sm">1 / 5</span>
-                    </div>
                     <!-- Total Ville mobile -->
                     <div class="stack-card mb-4 group relative rounded-2xl overflow-hidden min-h-[400px] flex flex-col justify-end shadow-xl" style="background: linear-gradient(135deg, #1c1917 0%, #2d1f3d 100%);">
                         <img src="./assets/total-ville-12.png" alt="Total Ville 12" class="absolute inset-0 w-full h-full object-cover object-bottom opacity-50" loading="lazy">
@@ -2290,14 +2293,14 @@
                 const isMobile = window.innerWidth < 768;
                 const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
                 // 5 visible on desktop, 3 on tablet, 1 on mobile
-                const MAX_VIS = isMobile ? 1 : isTablet ? 3 : 5;
+                const MAX_VIS = isMobile ? 3 : isTablet ? 3 : 5;
                 const maxOff = Math.floor(MAX_VIS / 2);
                 // Card sizes — center is largest, shrinks outward
-                const CW_CENTER = isMobile ? Math.min(300, window.innerWidth * 0.78) : isTablet ? 340 : 400;
+                const CW_CENTER = isMobile ? Math.min(240, window.innerWidth * 0.55) : isTablet ? 340 : 400;
                 const CH_CENTER = isMobile ? CW_CENTER * 1.2 : 440;
                 const SCALE_1 = 0.78;  // immediate neighbors
                 const SCALE_2 = 0.6;   // outermost cards
-                const SPACING = isMobile ? 0 : isTablet ? CW_CENTER * 0.52 : CW_CENTER * 0.58;
+                const SPACING = isMobile ? CW_CENTER * 0.45 : isTablet ? CW_CENTER * 0.52 : CW_CENTER * 0.58;
 
                 let active = 0;
                 let autoT = null;
@@ -2348,8 +2351,8 @@
                         const x = off * SPACING;
                         const z = isCenter ? 10 : abs === 1 ? 5 : 0;
                         // Arc: center at top, sides curve down + rotate
-                        const arcY = isCenter ? 0 : abs === 1 ? 30 : 65;
-                        const arcRot = off * (abs === 1 ? 4 : 7);
+                        const arcY = isCenter ? 0 : abs === 1 ? (isMobile ? 18 : 30) : (isMobile ? 38 : 65);
+                        const arcRot = off * (abs === 1 ? (isMobile ? 3 : 4) : (isMobile ? 5 : 7));
                         const brightness = isCenter ? 1 : abs === 1 ? 0.7 : 0.5;
                         const blur = isCenter ? 0 : abs === 1 ? 0 : 1;
                         const shadow = isCenter
@@ -2442,7 +2445,7 @@
             (() => {
                 const counterEl = document.getElementById('emp-counter');
                 if (!counterEl) return;
-                const stackCards = counterEl.parentElement.querySelectorAll('.stack-card');
+                const stackCards = counterEl.nextElementSibling.querySelectorAll('.stack-card');
                 if (!stackCards.length) return;
                 const counterSpan = counterEl.querySelector('span');
 
@@ -2473,6 +2476,19 @@
                     });
                 }, { passive: true });
             })();
+
+            // Testimonial card stack — highlight active
+            if (window.innerWidth < 768) {
+                const tCards = document.querySelectorAll('.card-stack .testimonial-card');
+                if (tCards.length) {
+                    const tObs = new IntersectionObserver((entries) => {
+                        entries.forEach(e => {
+                            e.target.classList.toggle('stack-active', e.isIntersecting);
+                        });
+                    }, { threshold: 0.7 });
+                    tCards.forEach(c => tObs.observe(c));
+                }
+            }
 
             // WhatsApp pulse pause during form interaction (Item 16)
             (() => {
