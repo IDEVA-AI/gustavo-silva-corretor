@@ -1,0 +1,9 @@
+.DS_Store
+*.zip
+
+# Imagens temporarias na raiz (ja copiadas pra /assets/)
+/Whisk_*.png
+/ChatGPT Image*.png
+/alto da alvorada.png
+/reserva.png
+/singulare.png
