@@ -2268,6 +2268,9 @@
                         const sc = isCenter ? 1 : abs === 1 ? SCALE_1 : SCALE_2;
                         const x = off * SPACING;
                         const z = isCenter ? 10 : abs === 1 ? 5 : 0;
+                        // Arc: center at top, sides curve down + rotate
+                        const arcY = isCenter ? 0 : abs === 1 ? 30 : 65;
+                        const arcRot = off * (abs === 1 ? 4 : 7);
                         const brightness = isCenter ? 1 : abs === 1 ? 0.7 : 0.5;
                         const blur = isCenter ? 0 : abs === 1 ? 0 : 1;
                         const shadow = isCenter
@@ -2279,7 +2282,7 @@
                         el.style.opacity = '1';
                         el.style.pointerEvents = 'auto';
                         el.style.zIndex = z;
-                        el.style.transform = `translateX(${x}px) scale(${sc})`;
+                        el.style.transform = `translateX(${x}px) translateY(${arcY}px) rotate(${arcRot}deg) scale(${sc})`;
                         el.style.filter = `brightness(${brightness})${blur ? ` blur(${blur}px)` : ''}`;
                         el.style.boxShadow = shadow;
                         el.style.cursor = isCenter ? 'grab' : 'pointer';
