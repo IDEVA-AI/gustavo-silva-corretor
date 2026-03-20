@@ -2280,8 +2280,7 @@
                                 : '0 8px 24px -8px rgba(0,0,0,0.15)';
 
                         const sat = isCenter ? 1 : abs === 1 ? 0.35 : 0.15;
-                        const opa = isCenter ? 1 : abs === 1 ? 0.7 : 0.45;
-                        el.style.opacity = opa;
+                        el.style.opacity = '1';
                         el.style.pointerEvents = 'auto';
                         el.style.zIndex = z;
                         el.style.transform = `translateX(${x}px) translateY(${arcY}px) rotate(${arcRot}deg) scale(${sc})`;
